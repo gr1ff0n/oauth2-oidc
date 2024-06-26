@@ -14,7 +14,7 @@ class UserHandlers
      * Редиректим пользователей на страницу по умолчанию (или в переадресовываем)
      * @param $fields
      */
-    public function redirectAfterLogin(&$fields): void
+    public static function redirectAfterLogin(&$fields): void
     {
         $from = static::checkFromParam();
         $url = false;
