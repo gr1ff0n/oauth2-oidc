@@ -25,7 +25,9 @@ slim https://www.slimframework.com/docs/v4/start/installation.html
 ````php
 use App\EventHandlers\UserHandlers;
 require_once ( $_SERVER['DOCUMENT_ROOT'] . '/local/vendor/autoload.php' );
+
 ...
+
 $em = Bitrix\Main\EventManager::getInstance();
 $em->addEventHandler('main', 'OnAfterUserLogin', [UserHandlers::class, "redirectAfterLogin"]);
 ````
