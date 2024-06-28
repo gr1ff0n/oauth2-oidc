@@ -1,5 +1,5 @@
 # Oauth2 with OIDC for Bitrix
-Адаптированный под PHP 8.3 вариант реализации Oauth 2.0 на основе сервера - oauth2-server, интеграции uru/bitrix-mvc и slim 4.
+Это форк https://github.com/Uru-ruru/oauth2-oidc, адаптированный под PHP 8.3 вариант реализации Oauth 2.0 на основе сервера - oauth2-server, интеграции uru/bitrix-mvc и slim 4.
 - league/oauth2-server - https://oauth2.thephpleague.com
 - uru/bitrix-mvc - https://github.com/Uru-ruru/bitrix-mvc
 - slim/slim - https://www.slimframework.com
@@ -19,6 +19,34 @@
 
 В данном описании не учитываются настройки используемых пакетов. Настройка сервера https://oauth2.thephpleague.com/installation/,
 slim https://www.slimframework.com/docs/v4/start/installation.html 
+
+### Установка
+Создаём файл `'composer.json'` папке сайта `'/local/'`
+````composer
+{
+  "config": {
+    "github-oauth": {
+      "github.com": "ваш токен аккаунта на github"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/gr1ff0n/oauth2-oidc.git"
+    }
+  ],
+  "require": {
+    "uru/oauth2-oidc": "dev-master"
+  }
+}
+````
+
+Переходим в терминале в папку `'/local/'` сайта и выполняем
+````bash
+php composer update
+````
+
+Устанавливаем мигратор по этой инструкции https://github.com/Uru-ruru/bitrix-mvc/blob/master/docs/migrations.md и мигрируем всё из папки migrations
 
 ### Битрикс
 - Добавить в `/local/php_interface/init.php`
