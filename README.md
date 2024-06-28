@@ -21,7 +21,7 @@
 slim https://www.slimframework.com/docs/v4/start/installation.html 
 
 ### Установка
-Создаём файл `'composer.json'` папке сайта `'/local/'`
+Создаём файл `composer.json` папке сайта `/local/`
 ````composer
 {
   "config": {
@@ -41,7 +41,7 @@ slim https://www.slimframework.com/docs/v4/start/installation.html
 }
 ````
 
-Переходим в терминале в папку `'/local/'` сайта и выполняем
+Переходим в терминале в папку `/local/` сайта и выполняем
 ````bash
 php composer update
 ````
@@ -59,7 +59,7 @@ require_once ( $_SERVER['DOCUMENT_ROOT'] . '/local/vendor/autoload.php' );
 $em = Bitrix\Main\EventManager::getInstance();
 $em->addEventHandler('main', 'OnAfterUserLogin', [UserHandlers::class, "redirectAfterLogin"]);
 ````
-- Создать файл конфига в папке `'config/.env.php'` по примеру в папке `config/.env.example.php`
+- Создать файл конфига в папке `config/.env.php` по примеру в папке `config/.env.example.php`
 
 
 ## Реализованные методы API
