@@ -1,5 +1,5 @@
 # Oauth2 with OIDC for Bitrix
-Вариант реализации Oauth 2.0 на основе сервера - oauth2-server, интеграции uru/bitrix-mvc и slim 4.
+Адаптированный под PHP 8.3 вариант реализации Oauth 2.0 на основе сервера - oauth2-server, интеграции uru/bitrix-mvc и slim 4.
 - league/oauth2-server - https://oauth2.thephpleague.com
 - uru/bitrix-mvc - https://github.com/Uru-ruru/bitrix-mvc
 - slim/slim - https://www.slimframework.com
