@@ -21,6 +21,8 @@
 slim https://www.slimframework.com/docs/v4/start/installation.html 
 
 ### Установка
+Добавляем в свой аккаунт токен для доступа к публичным репозиториям github по этой ссылке https://github.com/settings/tokens/new?scopes=&description=Composer
+
 Создаём файл `composer.json` папке сайта `/local/`
 ````composer
 {
