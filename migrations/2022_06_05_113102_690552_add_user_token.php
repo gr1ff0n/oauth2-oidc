@@ -47,7 +47,7 @@ class AddUserToken20220605113102690552 extends BitrixMigration
                 ->add();
 
             (new UserField())->constructDefault(Constructor::objHLBlock($hlBlockId), 'UF_USER')
-                ->setUserType('users')
+                ->setUserType('integer')
                 ->setLangDefault('en', 'User Identifier')
                 ->add();
 
