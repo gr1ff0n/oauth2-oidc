@@ -14,6 +14,7 @@
     "strobotti/php-jwk": "^1.3",
     "symfony/console": "^6.0",
     "symfony/var-dumper": "~3 || ~4",
+    "vlucas/phpdotenv": "^5.4.1",
     "uru/bitrix-mvc": "^1.0"
   },
   "require-dev": {
