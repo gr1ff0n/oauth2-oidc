@@ -74,7 +74,7 @@ class Oauth2Controller extends BaseController
      */
     public function __construct()
     {
-        $this->privateKey = 'file://' . env('PRIVATE_KEY');
+        $this->privateKey = 'file://' . getDotEnv('PRIVATE_KEY');
 
         $clientRepository = new ClientRepository();
         $this->tokenRepository = new AccessTokenRepository();
@@ -85,7 +85,7 @@ class Oauth2Controller extends BaseController
         $session = new Session();
         $bearerResponse = new BearerTokenResponse();
         $this->userRepository = new UserRepository();
-        $encryptionKey = env('JWT_TOKEN');
+        $encryptionKey = getDotEnv('JWT_TOKEN');
         $this->server = new AuthorizationServer(
             $clientRepository,
             $this->tokenRepository,
@@ -141,7 +141,7 @@ class Oauth2Controller extends BaseController
      */
     public static function resourceServerFactory(): AdvancedResourceServer
     {
-        $publicKey = 'file://' . env('PUBLIC_KEY');
+        $publicKey = 'file://' . getDotEnv('PUBLIC_KEY');
         return new AdvancedResourceServer(
             new AccessTokenRepository(),
             $publicKey
@@ -338,7 +338,7 @@ class Oauth2Controller extends BaseController
      */
     public function jwksKeys(Request $request, Response $response): Response
     {
-        $publicKeyPath = 'file://' . env('PUBLIC_KEY');
+        $publicKeyPath = 'file://' . getDotEnv('PUBLIC_KEY');
         $options = [
             'use' => 'sig',
             'alg' => self::alg,
