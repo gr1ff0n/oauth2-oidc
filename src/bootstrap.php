@@ -33,7 +33,7 @@ function cache($key = null, $minutes = null, $callback = null, $initDir = '/', $
     return Cache::remember($key, $minutes, $callback, $initDir, $basedir);
 }
 
-function env($key, $default = null)
+function getDotEnv($key, $default = null)
 {
     return DotEnv::get($key, $default);
 }
