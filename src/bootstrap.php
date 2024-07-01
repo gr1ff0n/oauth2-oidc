@@ -38,6 +38,4 @@ function getDotEnv($key, $default = null)
     return DotEnv::get($key, $default);
 }
 
-require_once project_path('vendor/autoload.php');
-
 DotEnv::load(project_path('config/.env.php'));
