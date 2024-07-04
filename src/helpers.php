@@ -79,6 +79,9 @@ function highloadblock_entity(string $table): Base
  */
 function logger(string $name = 'common'): Logger
 {
+    if (!Registry::hasLogger($name)) {
+        Registry::addLogger(new Logger($name), $name);
+    }
     return Registry::getInstance($name);
 }
 
